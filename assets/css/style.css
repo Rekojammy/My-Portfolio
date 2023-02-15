@@ -19,7 +19,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: url("../img/pexels-neo-2653362.jpg") top right no-repeat;
+  background: url("../img/bg.png"), top right no-repeat;
   background-color: rgba(19, 18, 18, 0.5);
   background-blend-mode: overlay;
   background-size: cover;
@@ -66,6 +66,65 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #040404;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #1862d2;
+  border-top-color: #040404;
+  border-bottom-color: #040404;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Header

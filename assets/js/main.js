@@ -45,6 +45,16 @@
   }
 
   /**
+   * Preloader
+   */
+   let preloader = select('#preloader');
+   if (preloader) {
+     window.addEventListener('load', () => {
+       preloader.remove()
+     });
+   }
+
+  /**
    * Mobile nav toggle
    */
   on('click', '.mobile-nav-toggle', function(e) {
