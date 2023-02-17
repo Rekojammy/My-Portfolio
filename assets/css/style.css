@@ -16,8 +16,6 @@ body {
   background: transparent;
 }
 
-
-
 @media (min-width: 1024px) {
   body::before {
     content: "";
@@ -39,12 +37,12 @@ body {
   body {
     background: url(../img/PSX_20230213_230518.jpg);
     background-color: rgb(4, 4, 4, 0.5);
-    background-attachment: fixed;
     background-blend-mode: overlay;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     z-index: 2;
+    background-attachment: fixed;
   }
 }
 
